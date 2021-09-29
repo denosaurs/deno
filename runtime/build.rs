@@ -140,6 +140,7 @@ mod not_docs {
         false, // No --unstable.
       ),
       deno_ffi::init::<Permissions>(false),
+      deno_windowing::init(false),
       deno_net::init::<Permissions>(
         None, false, // No --unstable.
         None,

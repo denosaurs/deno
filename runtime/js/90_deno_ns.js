@@ -139,5 +139,6 @@
     flockSync: __bootstrap.fs.flockSync,
     funlock: __bootstrap.fs.funlock,
     funlockSync: __bootstrap.fs.funlockSync,
+    windowing: __bootstrap.windowing
   };
 })(this);

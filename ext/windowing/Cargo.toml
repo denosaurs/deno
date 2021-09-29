@@ -1,0 +1,21 @@
+# Copyright 2018-2021 the Deno authors. All rights reserved. MIT license.
+
+[package]
+name = "deno_windowing"
+version = "0.1.0"
+authors = ["Elias Sjögreen"]
+edition = "2018"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/denosaurs/deno_desktop"
+description = "Windowing for deno"
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+deno_core = { version = "0.105.0", path = "../../core" }
+serde = { version = "1.0.130", features = ["derive"] }
+winit = { version = "0.25.0", features = ["serde"] }
+serde_millis = "0.1.1"
+raw-window-handle = "0.3.3"

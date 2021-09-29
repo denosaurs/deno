@@ -122,6 +122,8 @@ impl MainWorker {
       deno_timers::init::<Permissions>(),
       // ffi
       deno_ffi::init::<Permissions>(unstable),
+      // windowing
+      deno_windowing::init(unstable),
       // Runtime ops
       ops::runtime::init(main_module.clone()),
       ops::worker_host::init(options.create_web_worker_cb.clone()),
