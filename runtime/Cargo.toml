@@ -28,6 +28,7 @@ deno_core = { version = "0.101.0", path = "../core" }
 deno_crypto = { version = "0.33.0", path = "../ext/crypto" }
 deno_fetch = { version = "0.42.0", path = "../ext/fetch" }
 deno_ffi = { version = "0.6.0", path = "../ext/ffi" }
+deno_windowing = { version = "0.1.0", path = "../ext/windowing" }
 deno_http = { version = "0.11.0", path = "../ext/http" }
 deno_net = { version = "0.11.0", path = "../ext/net" }
 deno_timers = { version = "0.17.0", path = "../ext/timers" }
@@ -50,6 +51,7 @@ deno_core = { version = "0.101.0", path = "../core" }
 deno_crypto = { version = "0.33.0", path = "../ext/crypto" }
 deno_fetch = { version = "0.42.0", path = "../ext/fetch" }
 deno_ffi = { version = "0.6.0", path = "../ext/ffi" }
+deno_windowing = { version = "0.1.0", path = "../ext/windowing" }
 deno_http = { version = "0.11.0", path = "../ext/http" }
 deno_net = { version = "0.11.0", path = "../ext/net" }
 deno_timers = { version = "0.17.0", path = "../ext/timers" }

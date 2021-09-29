@@ -126,6 +126,8 @@ impl MainWorker {
       deno_timers::init::<Permissions>(),
       // ffi
       deno_ffi::init::<Permissions>(options.unstable),
+      // windowing
+      deno_windowing::init(options.unstable),
       // Metrics
       metrics::init(),
       // Runtime ops

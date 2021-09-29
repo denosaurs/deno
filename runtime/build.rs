@@ -70,6 +70,7 @@ mod not_docs {
         false, // No --unstable.
       ),
       deno_ffi::init::<deno_ffi::NoFfiPermissions>(false),
+      deno_windowing::init(false),
       deno_net::init::<deno_net::NoNetPermissions>(
         None, false, // No --unstable.
         None,

@@ -338,6 +338,8 @@ impl WebWorker {
       deno_timers::init::<Permissions>(),
       // ffi
       deno_ffi::init::<Permissions>(options.unstable),
+      // windowing
+      deno_windowing::init(options.unstable),
       // Metrics
       metrics::init(),
       // Permissions ext (worker specific state)
