@@ -41,6 +41,7 @@
     NumberMAX_SAFE_INTEGER,
     // deno-lint-ignore camelcase
     NumberMIN_SAFE_INTEGER,
+    ObjectAssign,
     ObjectCreate,
     ObjectDefineProperties,
     ObjectDefineProperty,
@@ -359,11 +360,11 @@
   };
 
   converters.DOMString = function (V, opts = {}) {
-    if (opts.treatNullAsEmptyString && V === null) {
+    if (typeof V === "string") {
+      return V;
+    } else if (V === null && opts.treatNullAsEmptyString) {
       return "";
-    }
-
-    if (typeof V === "symbol") {
+    } else if (typeof V === "symbol") {
       throw makeException(
         TypeError,
         "is a symbol, which cannot be converted to a string",
@@ -726,7 +727,7 @@
       }
       const esDict = V;
 
-      const idlDict = { ...defaultValues };
+      const idlDict = ObjectAssign({}, defaultValues);
 
       // NOTE: fast path Null and Undefined.
       if ((V === undefined || V === null) && !hasRequiredKey) {
